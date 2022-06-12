@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/reg_wallpaper3"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="tech.myevents.hq.UserConfirmation"
+    tools:showIn="@layout/activity_user_confirmation">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_marginTop="140dp"
+            android:src="@drawable/reg_welcome_logo"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_width="150dp"
+            android:layout_height="150dp" />
+
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_height="50dp">
+
+            <EditText
+                android:id="@+id/etConfCode"
+                android:textColor="#b2dfdb"
+                android:hint="confirmation code"
+                android:inputType="phone"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:textColorHint="#616161" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="70dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvResend"
+                android:onClick="doTheWork"
+                android:text="Resend Code"
+                android:textColor="#b2dfdb"
+                android:textSize="12sp"
+                android:layout_marginRight="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvEditNumber"
+                android:onClick="doTheWork"
+                android:text="Edit Number"
+                android:textSize="12sp"
+                android:textColor="#b2dfdb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/bFinaliseProcess"
+                android:text="ACTIVATE"
+                android:textColor="#b2dfdb"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:onClick="finalizeProcess"
+                android:background="#45008080" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

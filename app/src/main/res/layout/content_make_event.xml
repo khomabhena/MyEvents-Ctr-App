@@ -1,0 +1,844 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="tech.myevents.hq.MakeEvent"
+    tools:showIn="@layout/activity_make_event">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Add Media"
+            android:textSize="14sp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/llPoster"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center_horizontal|center_vertical"
+            android:background="@drawable/background_shadow"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp">
+
+            <LinearLayout
+                android:layout_margin="1px"
+                android:background="@drawable/background_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivPoster"
+                    android:background="@drawable/background_poster"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:id="@+id/ibDeletePoster"
+                        android:src="@drawable/ib_delete"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:background="#00ffffff"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:id="@+id/ibPoster"
+                        android:src="@drawable/ib_poster_gray"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:background="#00ffffff"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:id="@+id/ibVideo"
+                        android:src="@drawable/ib_video_gray"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:background="#00ffffff"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:id="@+id/ibDeleteVideo"
+                        android:src="@drawable/ib_delete"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:background="#00ffffff"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_corners"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:text=""
+                android:textSize="12sp"
+                android:layout_gravity="left"
+                android:gravity="left"
+                android:layout_width="0dp"
+                android:layout_height="0dp" />
+
+            <EditText
+                android:id="@+id/etName"
+                android:hint="Event Name"
+                android:textColor="#5c5c5c"
+                android:inputType="textPhonetic"
+                android:background="@drawable/edit_text_background"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_corners"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvVenue"
+                android:text=""
+                android:textSize="12sp"
+                android:layout_gravity="left"
+                android:gravity="left"
+                android:layout_width="0dp"
+                android:layout_height="0dp" />
+
+            <EditText
+                android:id="@+id/etVenue"
+                android:hint="Event Venue"
+                android:textColor="#5c5c5c"
+                android:inputType="textPhonetic"
+                android:background="@drawable/edit_text_background"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@drawable/rounded_corners"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Select Your Target City And Suburb"
+                android:textSize="15sp"
+                android:textColor="#008080"
+                android:padding="7dp"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginLeft="1px"
+                android:layout_marginBottom="1px"
+                android:layout_marginRight="1px"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_marginRight="1dp"
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:background="@drawable/background_transparent_edit_text"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginBottom="9dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/autoCity"
+                            android:hint="Select City"
+                            android:textColor="#008080"
+                            android:textSize="14sp"
+                            android:inputType="textPhonetic"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:background="@drawable/edit_text_background"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_marginLeft="1dp"
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:background="@drawable/background_transparent_edit_text"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginBottom="9dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/autoSuburb"
+                            android:hint="Select Suburb"
+                            android:textColor="#008080"
+                            android:textSize="14sp"
+                            android:inputType="textPhonetic"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:background="@drawable/edit_text_background"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/llStartDate"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center_horizontal|center_vertical"
+                android:background="@drawable/rounded_corners"
+                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="START DATE"
+                    android:textSize="12sp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tvStartDate"
+                    android:hint="-- / -- / --"
+                    android:textColor="#008080"
+                    android:background="@drawable/edit_text_background"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llStartTime"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center_horizontal|center_vertical"
+                android:background="@drawable/rounded_corners"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="START TIME"
+                    android:textSize="12sp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tvStartTime"
+                    android:hint="-- : --"
+                    android:textColor="#008080"
+                    android:background="@drawable/edit_text_background"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/llEndDate"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center_horizontal|center_vertical"
+                android:background="@drawable/rounded_corners"
+                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="END DATE"
+                    android:textSize="12sp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tvEndDate"
+                    android:hint="-- / -- / --"
+                    android:textColor="#008080"
+                    android:background="@drawable/edit_text_background"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llEndTime"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center_horizontal|center_vertical"
+                android:background="@drawable/rounded_corners"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="END TIME"
+                    android:textSize="12sp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tvEndTime"
+                    android:hint="-- : --"
+                    android:textColor="#008080"
+                    android:background="@drawable/edit_text_background"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center_horizontal|center_vertical"
+                android:background="@drawable/rounded_corners"
+                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="EVENT CATEGORY"
+                    android:textSize="12sp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Spinner
+                    android:id="@+id/spinCategory"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center_horizontal|center_vertical"
+                android:background="@drawable/rounded_corners"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="BROADCAST RANGE"
+                    android:textSize="12sp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Spinner
+                    android:id="@+id/spinBroadcastRange"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center_horizontal|center_vertical"
+                android:background="@drawable/rounded_corners"
+                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="MIN PRICE"
+                    android:textSize="12sp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="$"
+                        android:textSize="16sp"
+                        android:layout_gravity="center_vertical|right"
+                        android:gravity="center_vertical|right"
+                        android:textColor="#008080"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/etMinPrice"
+                        android:hint=" -- "
+                        android:textColor="#008080"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/edit_text_background"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="6dp"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center_horizontal|center_vertical"
+                android:background="@drawable/rounded_corners"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="MAX PRICE"
+                    android:textSize="12sp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="$"
+                        android:textSize="16sp"
+                        android:layout_gravity="center_vertical|right"
+                        android:gravity="center_vertical|right"
+                        android:textColor="#008080"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/etMaxPrice"
+                        android:hint=" -- "
+                        android:textColor="#008080"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/edit_text_background"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="6dp"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_corners"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Broadcast Charge : "
+                    android:textSize="13sp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvBroadcastCharge"
+                    android:text="$100.00"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#00796b"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Merchant Code : "
+                    android:textSize="13sp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvAgentCode"
+                    android:text="446754 (ecocash)"
+                    android:textSize="15sp"
+                    android:textIsSelectable="true"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#00796b"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Your Audience : "
+                    android:textSize="13sp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvAudience"
+                    android:text="2.3 K"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#00796b"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_corners"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvConfirmationCode"
+                android:text=""
+                android:textSize="12sp"
+                android:layout_gravity="left"
+                android:gravity="left"
+                android:layout_width="0dp"
+                android:layout_height="0dp" />
+
+            <EditText
+                android:id="@+id/etConfirmationCode"
+                android:hint="Enter Confirmation Code"
+                android:inputType="number"
+                android:textColor="#00796b"
+                android:background="@drawable/edit_text_background"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_corners"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvDetails"
+                android:text=""
+                android:textSize="12sp"
+                android:layout_gravity="left"
+                android:gravity="left"
+                android:layout_width="0dp"
+                android:layout_height="0dp" />
+
+            <EditText
+                android:id="@+id/etDetails"
+                android:hint="Event Details(optional)"
+                android:inputType="textPhonetic"
+                android:background="@drawable/edit_text_background"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:background="#008080"
+                android:layout_width="match_parent"
+                android:layout_height="1px" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <Button
+                    android:id="@+id/bPreviewEvent"
+                    android:text="PREVIEW EVENT"
+                    android:textSize="12sp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_width="164dp"
+                    android:layout_height="match_parent"
+                    android:background="#00ffffff" />
+
+                <View
+                    android:background="#008080"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_width="1px"
+                    android:layout_height="25dp" />
+
+                <Button
+                    android:id="@+id/bBroadcastEvent"
+                    android:text="BROADCAST EVENT"
+                    android:textSize="12sp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_width="164dp"
+                    android:layout_height="match_parent"
+                    android:background="#00ffffff" />
+
+            </LinearLayout>
+
+            <View
+                android:background="#008080"
+                android:layout_width="match_parent"
+                android:layout_height="1px" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

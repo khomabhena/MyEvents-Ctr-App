@@ -1,0 +1,33 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tech.myevents.hq.WaitingAdsFragment">
+
+    <ListView
+        android:id="@+id/lvAdsWaiting"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
+    <LinearLayout
+        android:id="@+id/llAdEmptyWaiting"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvAdEmptyWaiting"
+            android:text="No new ads received at the moment"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</FrameLayout>

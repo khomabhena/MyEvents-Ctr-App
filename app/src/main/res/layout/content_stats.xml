@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_stats"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="tech.myevents.hq.Stats"
+    tools:showIn="@layout/activity_stats">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@drawable/rounded_corners"
+            android:layout_marginBottom="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <TextView
+                android:text="Total Installs"
+                android:textSize="15sp"
+                android:textColor="#008080"
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvTotalInstalls"
+                android:text="4554"
+                android:textSize="16sp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@drawable/rounded_corners"
+            android:layout_marginBottom="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <TextView
+                android:text="Total Users"
+                android:textSize="15sp"
+                android:textColor="#008080"
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvTotalUsers"
+                android:text="4554"
+                android:textSize="16sp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@drawable/rounded_corners"
+            android:layout_marginBottom="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <TextView
+                android:text="Facebook Sign-ups"
+                android:textSize="15sp"
+                android:textColor="#008080"
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvFacebookSign"
+                android:text="4554"
+                android:textSize="16sp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@drawable/rounded_corners"
+            android:layout_marginBottom="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <TextView
+                android:text="Daily Active Devices"
+                android:textSize="15sp"
+                android:textColor="#008080"
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvMobileSign"
+                android:text="4554"
+                android:textSize="16sp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@drawable/rounded_corners"
+            android:layout_marginBottom="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <TextView
+                android:text="Daily Active Users"
+                android:textSize="15sp"
+                android:textColor="#008080"
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvDailyActive"
+                android:text="4554"
+                android:textSize="16sp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@drawable/rounded_corners"
+            android:layout_marginBottom="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <TextView
+                android:text="Weekly Active Users"
+                android:textSize="15sp"
+                android:textColor="#008080"
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvWeeklyActive"
+                android:text="4554"
+                android:textSize="16sp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@drawable/rounded_corners"
+            android:layout_marginBottom="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <TextView
+            android:text="Monthly Active Users"
+            android:textSize="15sp"
+            android:textColor="#008080"
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvMonthlyActive"
+                android:text="4554"
+                android:textSize="16sp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@drawable/rounded_corners"
+            android:layout_marginBottom="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <TextView
+                android:text="Broadcasts To-Date"
+                android:textSize="15sp"
+                android:textColor="#008080"
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvEvents"
+                    android:text="4554"
+                    android:textSize="16sp"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="50dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvAds"
+                    android:text="4554"
+                    android:textSize="16sp"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="170dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

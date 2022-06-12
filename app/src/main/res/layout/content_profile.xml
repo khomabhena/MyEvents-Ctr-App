@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="3dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="tech.myevents.hq.Profile"
+    tools:showIn="@layout/activity_profile">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:background="@drawable/rounded_corners"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginRight="1dp"
+                android:layout_width="165dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvCit"
+                    android:text="City | Town"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:background="@drawable/background_transparent_edit_text"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginBottom="9dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/autoCity"
+                        android:hint="Not Selected"
+                        android:textColor="#008080"
+                        android:textSize="14sp"
+                        android:inputType="textPhonetic"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:background="@drawable/edit_text_background"
+                        android:completionThreshold="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_marginLeft="1dp"
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvLoc"
+                        android:text="Suburb"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:background="@drawable/background_transparent_edit_text"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginBottom="9dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/autoSuburb"
+                            android:hint="Not Selected"
+                            android:textColor="#008080"
+                            android:textSize="14sp"
+                            android:inputType="textPhonetic"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:background="@drawable/edit_text_background"
+                            android:completionThreshold="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTap"
+            android:text="Tap Your Interests"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_corners"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_marginRight="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/llAmusementPark"
+                android:orientation="vertical"
+                android:onClick="interestChange"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivAmusementPark"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:background="#00ffffff"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp" />
+
+                <TextView
+                    android:id="@+id/tvAmuse"
+                    android:text="Amusement Park"
+                    android:textSize="13sp"
+                    android:textColor="#6c6c6c"
+                    android:textAlignment="center"
+                    android:layout_marginTop="4dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/llBusiness"
+                    android:orientation="vertical"
+                    android:onClick="interestChange"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:id="@+id/ivBusiness"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:background="#00ffffff"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp" />
+
+                    <TextView
+                        android:id="@+id/tvBus"
+                        android:text="Business"
+                        android:textSize="13sp"
+                        android:textColor="#6c6c6c"
+                        android:textAlignment="center"
+                        android:layout_marginTop="4dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/llClubbing"
+                    android:orientation="vertical"
+                    android:onClick="interestChange"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:id="@+id/ivClubbing"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:background="#00ffffff"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp" />
+
+                    <TextView
+                        android:id="@+id/tvClub"
+                        android:text="Clubbing"
+                        android:textSize="13sp"
+                        android:textColor="#6c6c6c"
+                        android:textAlignment="center"
+                        android:layout_marginTop="4dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_corners"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_marginRight="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:id="@+id/llConcert"
+                    android:orientation="vertical"
+                    android:onClick="interestChange"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/ivConcert"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:background="#00ffffff"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp" />
+
+                    <TextView
+                        android:id="@+id/tvCon"
+                        android:text="Concert"
+                        android:textSize="13sp"
+                        android:textColor="#6c6c6c"
+                        android:textAlignment="center"
+                        android:layout_marginTop="4dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/llFestival"
+                    android:orientation="vertical"
+                    android:onClick="interestChange"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:id="@+id/ivFestival"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:background="#00ffffff"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp" />
+
+                    <TextView
+                        android:id="@+id/tvExh"
+                        android:text="Festival"
+                        android:textSize="13sp"
+                        android:textColor="#6c6c6c"
+                        android:textAlignment="center"
+                        android:layout_marginTop="4dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/llExhibition"
+                    android:orientation="vertical"
+                    android:onClick="interestChange"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:id="@+id/ivExhibition"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:background="#00ffffff"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp" />
+
+                    <TextView
+                        android:id="@+id/tvFes"
+                        android:text="Exhibition"
+                        android:textSize="13sp"
+                        android:textColor="#6c6c6c"
+                        android:textAlignment="center"
+                        android:layout_marginTop="4dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_corners"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_marginRight="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:id="@+id/llMusicalPerformance"
+                    android:orientation="vertical"
+                    android:onClick="interestChange"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/ivMusicalPerformance"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:background="#00ffffff"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp" />
+
+                    <TextView
+                        android:id="@+id/tvMusP"
+                        android:text="Musician/Band"
+                        android:textSize="13sp"
+                        android:textColor="#6c6c6c"
+                        android:textAlignment="center"
+                        android:layout_marginTop="4dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/llMusic"
+                    android:orientation="vertical"
+                    android:onClick="interestChange"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:id="@+id/ivMusic"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:background="#00ffffff"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp" />
+
+                    <TextView
+                        android:id="@+id/tvMus"
+                        android:text="Music"
+                        android:textSize="13sp"
+                        android:textColor="#6c6c6c"
+                        android:textAlignment="center"
+                        android:layout_marginTop="4dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/llTheatre"
+                    android:orientation="vertical"
+                    android:onClick="interestChange"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:id="@+id/ivTheatre"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:background="#00ffffff"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp" />
+
+                    <TextView
+                        android:id="@+id/tvThe"
+                        android:text="Theatre"
+                        android:textSize="13sp"
+                        android:textColor="#6c6c6c"
+                        android:textAlignment="center"
+                        android:layout_marginTop="4dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_corners"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_marginRight="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:id="@+id/llRetreat"
+                    android:orientation="vertical"
+                    android:onClick="interestChange"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/ivRetreat"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:background="#00ffffff"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp" />
+
+                    <TextView
+                        android:id="@+id/tvRec"
+                        android:text="Retreat"
+                        android:textSize="13sp"
+                        android:textColor="#6c6c6c"
+                        android:textAlignment="center"
+                        android:layout_marginTop="4dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/llOutdoor"
+                    android:orientation="vertical"
+                    android:onClick="interestChange"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:id="@+id/ivOutdoor"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:background="#00ffffff"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp" />
+
+                    <TextView
+                        android:id="@+id/tvPar"
+                        android:text="Outdoors"
+                        android:textSize="13sp"
+                        android:textColor="#6c6c6c"
+                        android:textAlignment="center"
+                        android:layout_marginTop="4dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/llFashion"
+                    android:orientation="vertical"
+                    android:onClick="interestChange"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:id="@+id/ivFashion"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:background="#00ffffff"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp" />
+
+                    <TextView
+                        android:id="@+id/tvOut"
+                        android:text="Fashion"
+                        android:textSize="13sp"
+                        android:textColor="#6c6c6c"
+                        android:textAlignment="center"
+                        android:layout_marginTop="4dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_corners"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_marginRight="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:id="@+id/llComedy"
+                    android:orientation="vertical"
+                    android:onClick="interestChange"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/ivComedy"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:background="#00ffffff"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp" />
+
+                    <TextView
+                        android:id="@+id/tvCom"
+                        android:text="Comedy"
+                        android:textSize="13sp"
+                        android:textColor="#6c6c6c"
+                        android:textAlignment="center"
+                        android:layout_marginTop="4dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/llParty"
+                    android:orientation="vertical"
+                    android:onClick="interestChange"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:id="@+id/ivParty"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:background="#00ffffff"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp" />
+
+                    <TextView
+                        android:id="@+id/tvRet"
+                        android:text="Party"
+                        android:textSize="13sp"
+                        android:textColor="#6c6c6c"
+                        android:textAlignment="center"
+                        android:layout_marginTop="4dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/llRecreational"
+                    android:orientation="vertical"
+                    android:onClick="interestChange"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:id="@+id/ivRecreational"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:background="#00ffffff"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp" />
+
+                    <TextView
+                        android:id="@+id/tvFas"
+                        android:text="Recreational"
+                        android:textSize="13sp"
+                        android:textColor="#6c6c6c"
+                        android:textAlignment="center"
+                        android:layout_marginTop="4dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_corners"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_marginRight="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/llTechAndDesign"
+                android:orientation="vertical"
+                android:onClick="interestChange"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:layout_width="100dp"
+                android:layout_marginRight="50dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivTechAndDesign"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:background="#00ffffff"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp" />
+
+                <TextView
+                    android:id="@+id/tvTech"
+                    android:text="Tech &amp; Design"
+                    android:textSize="13sp"
+                    android:textColor="#6c6c6c"
+                    android:textAlignment="center"
+                    android:layout_marginTop="4dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llCommunity"
+                android:orientation="vertical"
+                android:onClick="interestChange"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:layout_width="100dp"
+                android:layout_height="100dp">
+
+                <ImageView
+                    android:id="@+id/ivCommunity"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:background="#00ffffff"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp" />
+
+                <TextView
+                    android:id="@+id/tvComm"
+                    android:text="Community"
+                    android:textSize="13sp"
+                    android:textColor="#6c6c6c"
+                    android:textAlignment="center"
+                    android:layout_marginTop="4dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

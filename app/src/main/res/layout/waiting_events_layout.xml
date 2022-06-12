@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/llEventRow"
+        android:orientation="horizontal"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="260dp">
+
+        <LinearLayout
+            android:background="@drawable/background_shadow"
+            android:layout_width="163dp"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_margin="1px"
+                android:background="@drawable/background_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivBitmap"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_margin="1px"
+            android:background="@drawable/background_shadow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/llContent"
+                android:orientation="vertical"
+                android:layout_margin="1px"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:background="@drawable/background_main"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:text="College Drink Up, All The Way Up"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#1b1b1b"
+                    android:textAlignment="gravity"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ImageButton
+                    android:id="@+id/ibPlace"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:layout_marginTop="14dp"
+                    android:background="#00ffffff"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+
+                <TextView
+                    android:id="@+id/tvVenue"
+                    android:text="Bowling Night Club"
+                    android:layout_marginTop="2dp"
+                    android:textSize="14sp"
+                    android:textAlignment="center"
+                    android:layout_marginRight="7dp"
+                    android:layout_marginLeft="7dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:textColor="#3f3e3e"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvLocation"
+                    android:text="CBD, Gweru"
+                    android:layout_marginTop="3dp"
+                    android:textSize="12sp"
+                    android:textAlignment="center"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:textColor="#616161"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ImageButton
+                    android:id="@+id/ibDate"
+                    android:layout_marginTop="15dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:background="#00ffffff"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:text="Sat 15-Nov-16, 18:00hrs"
+                    android:textSize="12sp"
+                    android:textAlignment="center"
+                    android:textColor="#00796b"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center_horizontal|bottom"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvConfCode"
+                    android:text="$60.00 ---- 51254631"
+                    android:textSize="10sp"
+                    android:textAlignment="center"
+                    android:textColor="#00796b"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_horizontal|bottom"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:id="@+id/llLikesViews"
+                    android:orientation="horizontal"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvPublish"
+                        android:text="waiting"
+                        android:layout_marginEnd="40dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageButton
+                        android:id="@+id/ibPublish"
+                        android:layout_marginTop="17dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:background="#00ffffff"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp" />
+
+                    <ImageButton
+                        android:id="@+id/ibCharge"
+                        android:layout_marginTop="17dp"
+                        android:layout_marginStart="10dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:background="#00ffffff"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

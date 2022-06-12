@@ -1,0 +1,36 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingRight="1dp"
+    android:paddingLeft="1dp"
+    android:paddingTop="2dp"
+    tools:context="tech.myevents.hq.AdsFragment">
+
+    <ListView
+        android:id="@+id/lvAds"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
+    <LinearLayout
+        android:id="@+id/llAdEmpty"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvAdEmpty"
+            android:text="No Advertisements received at the moment from the interests you've selected"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</FrameLayout>
